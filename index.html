@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="quizTitle">Quiz Title</h1>
+    <button id="addQuestion">Add Question</button>
+    <button id="save">Save Quiz</button>
+    <input type="file" id="fileInput" style="display: none">
+    <button id="load">Load Quiz</button>
+    <button id="darkModeButton">Dark Mode</button>
+    <button id="gameModeButton">Game Mode</button>
+    <div id="settingsButton">
+      <img src="settings-icon.png" alt="Settings">
+    </div>
+  </div>
+
+  <div id="quiz"></div>
+
+  <div id="addQuestionModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add Question</h2>
+      <input type="text" id="questionInput" placeholder="Enter the question" autofocus>
+      <input type="text" class="answer-input" placeholder="Enter answer 1">
+      <input type="text" class="answer-input" placeholder="Enter answer 2">
+      <input type="text" class="answer-input" placeholder="Enter answer 3">
+      <input type="text" class="answer-input" placeholder="Enter answer 4">
+      <label for="correctAnswerSelect">Select right answer:</label>
+      <select id="correctAnswerSelect">
+        <option value="0" selected>Answer 1</option>
+        <option value="1">Answer 2</option>
+        <option value="2">Answer 3</option>
+        <option value="3">Answer 4</option>
+      </select>
+      <button id="addQuestionButton">Add</button>
+    </div>
+  </div>
+
+  <div id="settingsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Settings</h2>
+      <label for="titleInput">Quiz Title:</label>
+      <input type="text" id="titleInput">
+      <button id="changeTitleButton">Change Title</button>
+    </div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
